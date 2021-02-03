@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[34]:
+
+
+calories = float(input("Enter calories: "))
+carbs = float(input("Enter carbs: "))
+fat = float(input("Enter fat: "))
+saturated_fat = float(input("Enter saturated fat: "))
+sugar = float(input("Enter sugar: "))
+protein = float(input("Enter protein: "))
+fibre = float(input("Enter fibre: "))
+salt = float(input("Enter salt: "))
+multiplier = float(input("Enter portion size in grams: "))
+real_multiplier = multiplier / 100
+
+
+pre_diet_list = [calories, carbs, fat, saturated_fat, sugar, protein, fibre, salt]
+post_diet_list =[i * real_multiplier for i in pre_diet_list]
+titles = ["calories: ", "carbs: ", "fat: ", "saturated fat: ", "sugar: ", "protein: ", "Fibre: ", "Salt: "]
+result = zip(titles,post_diet_list)
+for elem in result:    
+    print(tuple(result))
+
+
+# # 
